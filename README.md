@@ -19,7 +19,7 @@ SO THAT I can organize my thoughts and keep track of tasks I need to complete
 Express installed via terminal in VS Code. 
 
 ## Usage
-Link to [Deployed Page via Heroku]().
+Link to [Deployed Page via Heroku](https://peaceful-earth-46387-a79d3d6dc4ee.herokuapp.com/).
  The note taker landing page should appear and you can click Get Started. 
 ![screenshot1](Develop/images/noteTaker1.png)
 
