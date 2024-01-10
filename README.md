@@ -20,15 +20,14 @@ Express installed via terminal in VS Code.
 
 ## Usage
 Link to [Deployed Page via Heroku]().
-Link to [Deployed Page via Github]().
  The note taker landing page should appear and you can click Get Started. 
-
+![screenshot1](Develop/images/noteTaker1.png)
 
  You can enter the note title and note text and the option to save or clear form will appear. Saved notes will appear on the left side of screen. 
- 
+ ![screenshot](Develop/images/noteTaker2.png)
  
  Clicking the trashcan icon will delete the saved note.
-
+![screenshot](Develop/images/noteTaker3.png)
 
 # Credits
 [Link to starter code for this app](https://github.com/coding-boot-camp/miniature-eureka)
