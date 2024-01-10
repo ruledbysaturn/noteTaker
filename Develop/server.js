@@ -45,6 +45,25 @@ app.post('/api/notes', (req, res) => {
 });
 });
 
+app.delete('/api/notes/:id', (req, res) => {
+    const noteId = req.params.id;
+    fs.readFile(dbFilePath, 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+        return res.status(500).json({ error: 'Internal Server Error' });
+      }
+      const notes = JSON.parse(data);
+      const updatedNotes = notes.filter((note) => note.id !== noteId);
+      fs.writeFile(dbFilePath, JSON.stringify(updatedNotes), (err) => {
+        if (err) {
+          console.error(err);
+          return res.status(500).json({ error: 'Internal Server Error' });
+        }
+        res.sendStatus(204);
+      });
+    });
+  });
+
 app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/notes.html'));
 });
