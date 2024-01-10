@@ -6,9 +6,10 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'Develop', 'public')));
 
-const dbFilePath = path.join(__dirname, 'db.json');
+
+const dbFilePath = path.join(__dirname, 'Develop', 'db.json');
 
 //get all notes
 app.get('/api/notes', (req, res) => {
@@ -65,11 +66,11 @@ app.delete('/api/notes/:id', (req, res) => {
   });
 
 app.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/notes.html'));
+    res.sendFile(path.join(__dirname, 'Develop', 'public', 'notes.html'));
 });
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/index.html'));
+    res.sendFile(path.join(__dirname, 'Develop', 'public', 'index.html'));
 });
 
 app.listen(PORT, () =>
